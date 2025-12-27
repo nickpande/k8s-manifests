@@ -1,0 +1,6 @@
+resources:
+  - deployment.yaml
+  - service.yaml
+images:
+  - name: my-app
+    newTag: "v1.0.0"   # CI will update this dynamically
