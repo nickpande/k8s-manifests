@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: my-app
+  template:
+    metadata:
+      labels:
+        app: my-app
+    spec:
+      containers:
+      - name: my-app
+        image: europe-west1-docker.pkg.dev/project-98d6248d-82c3-400c-b8f/frontend/react-ui:28ff60a9fcac68f24b6e3ee3b92099f190b4b785
+        ports:
+        - containerPort: 80
